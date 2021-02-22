@@ -1,0 +1,4 @@
+Etc/GMT-4
+[date]
+
+date.timezone                = "Europe/Moscow"

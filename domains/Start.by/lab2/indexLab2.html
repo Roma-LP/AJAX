@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Лабораторные по AJAX #2</title>
+
+        <style type="text/css">
+        .content
+	    {
+	    	font-family:"Comic Sans MS", cursive;
+	    	font-size:15px;
+		
+	    	color:#FF0;
+	    	text-shadow:0px 0px 20px #000;
+
+		    width: 25%; margin: 0 auto; text-align: center;
+	    }
+
+        #buttonv2 {
+    color: #232323;
+    background: transparent;
+    border: 1px solid #232323;
+    position: relative;
+    font-size: 14px;
+    letter-spacing: .3em;
+    font-family: 'Montserrat', sans-serif;
+    padding: 17px 34px 17px 39px;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+#buttonv2:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 100%;
+    height: 100%;
+    background: #32D4E2;
+    z-index: -1;
+    transition: .25s ease;
+    transform: translate(0, 0);
+}
+#buttonv2:hover:before {
+    transform: translate(4px, 4px);
+}
+
+        </style>
+	</head>
+
+    <body >
+        <div class="content">
+        
+        <button id="buttonv2" type="submit">Загрузить</button>
+        <div id="textOutput"></div>
+        <script src="scriptLab2.js"></script>       
+        <input id="backButton" type="button" value="Назад" onclick="history.back()"> 
+        </div>
+    </body>
+
+</html>

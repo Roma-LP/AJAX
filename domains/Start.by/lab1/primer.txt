@@ -1,4 +1,5 @@
-Etc/GMT-4
-[date]
+..\Web-дизайн и шабл. проек-ния\OpenServer\modules\php\PHP_(version)\php.ini
 
+[date]
 date.timezone                = "Europe/Moscow"
+date.timezone                = "Etc/GMT-4"

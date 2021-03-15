@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Лабораторные по AJAX #3</title>
+        <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+        <style type="text/css">
+        .content
+	    {
+	    	font-family:"Comic Sans MS", cursive;
+	    	font-size:15px;
+		
+	    	color:rgb(255, 255, 0);
+	    	text-shadow:0px 0px 20px #000;
+
+		    width: 50%; margin: 0 auto; text-align: center;
+	    }
+        
+        body
+        {
+            background: #9900FF;
+        }
+       
+
+        </style>
+	</head>
+
+    <body >
+        <div class="content">
+        
+            <script type="text/javascript">
+
+            $( document ).ready(function() {
+	          $( "#button1" ).click(function() { 
+	          $( "#ex1" ).load( "test.php");  })
+	         });
+            
+            jQuery(document).ready(function(){ 
+                jQuery('#ex2').mouseover(function() {
+                    jQuery(this).load("image.html");})
+                });
+
+            </script>  
+            <div id="ex1"><button id="button1">Click to update</button></div>
+            <div id="ex2">Mouseover to update</div>
+            
+               
+        <input id="backButton" type="button" value="Назад" onclick="history.back()"> 
+        </div>
+    </body>
+
+</html>

@@ -12,14 +12,14 @@ function str(){
       //JSON.stringify для преобразования объектов в JSON строку.
       //JSON.parse для преобразования JSON обратно в объект.
       let jsonUser = JSON.stringify(user);
-      alert(user); // {name: "John", age: 30, fruits:[Яблоко,Апельсин,Слива],number:[1,2,3,4]}
-      alert(jsonUser); // {"name":"John","age":30,"fruits":["Яблоко","Апельсин","Слива"],"number":[1,2,3,4]} выведет объект в формате JSON:
-      alert(typeof jsonUser); // string мы получили строку!
+      WriteStr("user: "+ user); // {name: "John", age: 30, fruits:[Яблоко,Апельсин,Слива],number:[1,2,3,4]}
+      WriteStr("jsonUser: " +jsonUser); // {"name":"John","age":30,"fruits":["Яблоко","Апельсин","Слива"],"number":[1,2,3,4]} выведет объект в формате JSON:
+      WriteStr("typeof (jsonUser): "+typeof jsonUser); // string мы получили строку!
 
 
       let jsonParsUser = JSON.parse(jsonUser);
-      alert(jsonParsUser.number);
-      alert("min - "+FindMin(jsonParsUser));
+      WriteStr("jsonUser.number: "+jsonParsUser.number);
+      WriteStr("min - "+FindMin(jsonParsUser));
 
 }
 
@@ -31,5 +31,9 @@ function FindMin(jsonParsUser){
           }
     }
     return min;
+}
+
+function WriteStr(str){
+    $("#answer_div").append(`<p><b>${str}</b></p>`);
 }
 
